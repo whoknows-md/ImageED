@@ -1,0 +1,231 @@
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+header {
+    background-color: #1F1F1F;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.title-block {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title-text {
+    font-size: 1.5em; /* Slightly larger font */
+    color: #FFFFFF;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.content {
+    max-width: 1200px; /* Increased width */
+    background-color: #2D2D2D;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    padding: 80px; /* Increased padding */
+    text-align: center;
+    position: relative;
+    top: -40px; /* Moves the content section upward */
+    height: 75%; /* Increased height */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.content h2 {
+    font-size: 2.2em; /* Larger font size */
+    margin-bottom: 20px; /* Increased margin-bottom */
+    color: #FFFFFF;
+}
+
+.content p {
+    font-size: 1.4em; /* Larger font size */
+    margin-bottom: 20px; /* Increased margin-bottom */
+    color: #FFFFFF;
+}
+
+.image-upload {
+    width: 300px; /* Increased width */
+    height: 300px; /* Increased height */
+    border: 2px dashed #BBBBBB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #BBBBBB;
+    margin-bottom: 20px; /* Increased margin-bottom */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-upload input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.image-upload .preview-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #BBBBBB;
+    font-size: 1.4em; /* Larger font size */
+    pointer-events: none;
+    user-select: none;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: 2px solid #000;
+}
+
+.password-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.password-input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 350px; /* Increased max-width */
+}
+
+.password-input-wrapper input {
+    width: 90%; /* Wider input field */
+    padding: 15px; /* Increased padding */
+    padding-right: 45px; /* Increased padding-right */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* More rounded corners */
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+}
+
+.password-input-wrapper .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.password-input-wrapper .toggle-password img {
+    width: 25px; /* Larger icon */
+    height: 25px; /* Larger icon */
+}
+
+.password-section button {
+    background-color: #FF5722; /* Bright color for initial state */
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px; /* Adjusted padding */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 1.2em; /* Larger font size */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+}
+
+.password-section button:hover {
+    background-color: #E64A19; /* Darker shade on hover */
+    transform: translateY(-5px); /* Slightly lift the button on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.password-section button:active {
+    background-color: #D84315; /* Even darker shade on active */
+    transform: translateY(2px); /* Press-down effect */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Softer shadow on active */
+}
+
+.footer {
+    background-color: #1F1F1F;
+    padding: 10px; /* Increased padding */
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.download-link button {
+    background-color: #FF5722; /* Bright color for initial state */
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px; /* Adjusted padding */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 1.2em; /* Larger font size */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+}
+
+.download-link button:hover {
+    background-color: #E64A19; /* Darker shade on hover */
+    transform: translateY(-5px); /* Slightly lift the button on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.download-link button:active {
+    background-color: #D84315; /* Even darker shade on active */
+    transform: translateY(2px); /* Press-down effect */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Softer shadow on active */
+}
+
+.back-to-home {
+    position: absolute;
+    bottom: 50px; /* Increased bottom */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px; /* Adjusted width */
+    background-color: #FF5722; /* Bright color for initial state */
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px; /* Adjusted padding */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 1.2em; /* Larger font size */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+}
+
+.back-to-home:hover {
+    background-color: #E64A19; /* Darker shade on hover */
+    transform: translateY(-5px); /* Slightly lift the button on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.back-to-home:active {
+    background-color: #D84315; /* Even darker shade on active */
+    transform: translateY(2px); /* Press-down effect */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Softer shadow on active */
+}
